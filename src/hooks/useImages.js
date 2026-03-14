@@ -9,7 +9,7 @@ const useImages = () => {
     const fetchPhotos = async () => {
       setLoading(true);
       try {
-        const res = await fetch("https://picsum.photos/v2/list?page=30");
+        const res = await fetch("https://picsum.photos/v2/list?limit=30");
         if (!res.ok) {
           throw new Error("Failed to fetch photos");
         }
